@@ -1,0 +1,2 @@
+-- Placeholder: schema is managed via EF Core migrations in FlightWatch.Infrastructure.
+-- Add one-off seed data or extensions here if needed (e.g. CREATE EXTENSION IF NOT EXISTS postgis;).

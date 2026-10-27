@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-FlightWatch.Worker-f140a7a8-935a-4a95-8ced-6e0bf64fe77d</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FlightWatch.Core\FlightWatch.Core.csproj" />
+    <ProjectReference Include="..\FlightWatch.Infrastructure\FlightWatch.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>
