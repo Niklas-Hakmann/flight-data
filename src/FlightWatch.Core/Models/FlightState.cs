@@ -4,12 +4,12 @@ namespace FlightWatch.Core.Models;
 // velocity in meters/meters-per-second, so Infrastructure can pass these through as-is.
 public class FlightState
 {
-    public required string Icao24 { get; init; } // Source: icao24, 24-bit transponder address (hex string)
-    public required DateTimeOffset Timestamp { get; init; } // Source: time_position (Unix timestamp)
-    public required GeoPoint Position { get; init; } // Source: latitude/longitude, WGS-84 degrees
-    public double? AltitudeMeters { get; init; } // Source: baro_altitude, meters above standard pressure reference (not height above ground)
+    public required string Icao24 { get; init; } // Source: icao24, transponder adress
+    public required DateTimeOffset Timestamp { get; init; }
+    public required GeoPoint Position { get; init; } // Source: latitude/longitude
+    public double? AltitudeMeters { get; init; } // Source: baro_altitude, meters above sea level
     public double? GroundSpeedMetersPerSecond { get; init; } // Source: velocity, speed over ground (not airspeed), already m/s
-    public double? VerticalRateMetersPerSecond { get; init; } // Source: vertical_rate, already m/s, positive = climbing
-    public double? TrackDegrees { get; init; } // Source: true_track, degrees clockwise from true north
-    public bool OnGround { get; init; } // Source: on_ground
+    public double? VerticalRateMetersPerSecond { get; init; } // Source: vertical_rate, already m/s
+    public double? TrackDegrees { get; init; } // Source: degrees clockwise from true north
+    public bool OnGround { get; init; }
 }

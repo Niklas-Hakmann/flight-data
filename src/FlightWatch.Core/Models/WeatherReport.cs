@@ -1,6 +1,17 @@
 namespace FlightWatch.Core.Models;
 
 
+// Flight category based on ceiling and visibility (FAA definitions).
+// The worse of the two values decides the category.
+//
+//   Category   Ceiling (ft AGL)    Visibility (statute miles)
+//   Vfr        > 3000        and   > 5
+//   Mvfr       1000 to 3000  or    3 to 5
+//   Ifr        500 to < 1000 or    1 to < 3
+//   Lifr       < 500         or    < 1
+//
+// Values increase with severity (Vfr = 0, Lifr = 3), so rules can compare
+// with plain operators, e.g. category >= FlightCategory.Ifr.
 public enum FlightCategory
 {
     Vfr = 0,
